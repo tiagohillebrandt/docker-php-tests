@@ -1,4 +1,4 @@
-FROM php:7.1-fpm
+FROM php:5.6-fpm
 
 # Install system basics
 RUN set -ex; \
@@ -12,7 +12,7 @@ RUN set -ex; \
 RUN docker-php-ext-install mysqli
 
 # Install PHPUnit
-RUN curl -sSL https://phar.phpunit.de/phpunit.phar -o /usr/local/bin/phpunit; \
+RUN curl -sSL https://phar.phpunit.de/phpunit-5.7.phar -o /usr/local/bin/phpunit; \
     chmod +x /usr/local/bin/phpunit
 
 # Install WP-CLI
