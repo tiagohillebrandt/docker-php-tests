@@ -8,6 +8,9 @@ RUN set -ex; \
         curl \
         subversion
 
+# Enables Xdebug
+RUN pecl install xdebug && docker-php-ext-enable xdebug
+
 # Enable mysqli extension for PHP
 RUN docker-php-ext-install mysqli
 
